@@ -1,0 +1,96 @@
+Unity IL2CPP Game Analysis Report
+=====================================
+
+Game Type: Unity IL2CPP Compiled Game
+Analysis Date: 2026-02-24
+
+OVERVIEW
+--------
+This is a Unity mobile game that uses IL2CPP compilation technology.
+The original C# source code has been converted to C++ and compiled into native libraries.
+However, we can extract significant information from the global-metadata.dat file.
+
+KEY FINDINGS
+------------
+
+1. GAME SCRIPTS FOUND (2,215 total):
+   - CFXR_Demo.cs - Cartoon FX Remaster demo scripts
+   - CFXR_Effect.cs - Main effect system
+   - CFXR_ParticleText.cs - Particle text rendering
+   - ETFXButtonScript.cs - UI button interactions
+   - ETFXSceneManager.cs - Scene management
+   - UICanvasManager.cs - UI canvas management
+   - PEButtonScript.cs - Button effects
+
+2. MAJOR SYSTEMS:
+   - Cartoon FX Remaster (CFXR) - Particle effects system
+   - Google Play Games integration
+   - UI Management system
+   - Scene management
+   - Input management (CwInputManager)
+
+3. UNITY COMPONENTS (2,793):
+   - MonoBehaviour components
+   - UI components
+   - Event system components
+   - Material management
+
+4. MANAGER CLASSES (5,945):
+   - Input managers
+   - Scene managers
+   - UI canvas managers
+   - Resource managers
+   - Material managers
+
+5. UI ELEMENTS (26,532):
+   - Canvas systems
+   - Button scripts
+   - Text management
+   - Popup systems
+
+6. GAME LOGIC CLASSES (1,168):
+   - Player stats (GooglePlayGames.BasicApi.PlayerStats)
+   - Enemy objects (MEnemyObj.cs)
+   - Level up popup (LevelUpPopup.cs)
+   - Character systems
+   - Score systems
+
+TECHNICAL DETAILS
+-----------------
+- Total strings extracted: 597,683
+- Unity version appears to be recent (based on component names)
+- Uses IL2CPP compilation (C# -> C++ conversion)
+- Includes Google Play Games services
+- Has extensive particle effects system (Cartoon FX Remaster)
+- Contains UI management and scene management systems
+
+GAME GENRE INDICATORS
+---------------------
+Based on the extracted class names and systems:
+- Likely a casual mobile game
+- Has particle effects (suggests visual-heavy gameplay)
+- Includes Google Play Games integration (multiplayer/leaderboards)
+- Has enemy objects (suggests some form of combat/action)
+- Has level up system (RPG or progression elements)
+- Extensive UI system (menu-heavy game)
+
+RECOMMENDATIONS FOR SOURCE CODE RECOVERY
+----------------------------------------
+To get the actual C# source code, you would need:
+
+1. The libil2cpp.so file (native library) - currently missing from this extraction
+2. Use Il2CppDumper tool with:
+   - Input: libil2cpp.so + global-metadata.dat
+   - Output: Reconstructed C# code
+
+Alternative approaches:
+- Use Il2CppInspector tool
+- Use specialized Unity decompilers
+- Look for the complete APK with native libraries
+
+CONCLUSION
+----------
+While we cannot extract the complete C# source code without the native library files,
+we have successfully identified the game's structure, main systems, and likely gameplay elements.
+This appears to be a Unity mobile game with extensive particle effects, UI systems, and
+Google Play Games integration.
