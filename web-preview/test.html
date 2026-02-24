@@ -2,11 +2,55 @@
 <html>
 <head>
     <title>GitHub Pages Test</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: #e0e0e0;
+            margin: 0;
+            padding: 40px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            background: #1e1e2e;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid #2a2a3e;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            max-width: 600px;
+        }
+        h1 {
+            color: #64b5f6;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #e0e0e0;
+            margin: 10px 0;
+        }
+        .time {
+            color: #81c784;
+            font-weight: bold;
+        }
+        .success {
+            color: #81c784;
+            font-size: 1.2em;
+            margin: 20px 0;
+        }
+    </style>
 </head>
 <body>
-    <h1>🎮 Unity Particle Game Reconstruction</h1>
-    <p>GitHub Pages测试页面 - 如果你能看到这个页面，说明部署成功！</p>
-    <p>部署时间: <span id="time"></span></p>
+    <div class="container">
+        <h1>🎮 Unity Particle Game Reconstruction</h1>
+        <p class="success">✅ GitHub Pages部署成功！</p>
+        <p>如果你能看到这个页面，说明深色模式部署正常！</p>
+        <p>部署时间: <span class="time" id="time"></span></p>
+        <p>🌙 深色模式已启用</p>
+    </div>
     <script>
         document.getElementById('time').textContent = new Date().toLocaleString();
     </script>
