@@ -13,7 +13,9 @@ def check_unity_hub():
     unity_paths = [
         r"C:\Program Files\Unity Hub\Unity Hub.exe",
         r"C:\Program Files (x86)\Unity Hub\Unity Hub.exe",
-        r"C:\Users\{}\AppData\Local\Unity\Unity Hub.exe".format(os.getenv('USERNAME', ''))
+        r"C:\Users\{}\AppData\Local\Unity\Unity Hub.exe".format(os.getenv('USERNAME', '')),
+        r"C:\Program Files\Tuanjie\Hub\Tuanjie Hub.exe",
+        r"C:\Program Files (x86)\Tuanjie\Hub\Tuanjie Hub.exe"
     ]
     
     for path in unity_paths:
@@ -28,7 +30,9 @@ def check_unity_editor():
     """检查Unity编辑器是否安装"""
     unity_paths = [
         r"C:\Program Files\Unity\Hub\Editor\2021.3.21f1\Editor\Unity.exe",
-        r"C:\Program Files (x86)\Unity\Hub\Editor\2021.3.21f1\Editor\Unity.exe"
+        r"C:\Program Files (x86)\Unity\Hub\Editor\2021.3.21f1\Editor\Unity.exe",
+        r"C:\Program Files\Tuanjie\Hub\Editor\2021.3.21f1\Editor\Unity.exe",
+        r"C:\Program Files (x86)\Tuanjie\Hub\Editor\2021.3.21f1\Editor\Unity.exe"
     ]
     
     for path in unity_paths:
@@ -43,15 +47,20 @@ def check_visual_studio():
     """检查Visual Studio是否安装"""
     vs_paths = [
         r"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\devenv.exe",
-        r"C:\Program Files (x86)\Microsoft Visual Studio\2022\Community\Common7\IDE\devenv.exe"
+        r"C:\Program Files (x86)\Microsoft Visual Studio\2022\Community\Common7\IDE\devenv.exe",
+        r"C:\Program Files\Microsoft Visual Studio\2019\Community\Common7\IDE\devenv.exe",
+        r"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\devenv.exe"
     ]
     
     for path in vs_paths:
         if os.path.exists(path):
-            print(f"Visual Studio 2022 installed: {path}")
+            if "2022" in path:
+                print(f"Visual Studio 2022 installed: {path}")
+            elif "2019" in path:
+                print(f"Visual Studio 2019 installed: {path}")
             return True
     
-    print("Visual Studio 2022 not installed")
+    print("Visual Studio not installed")
     return False
 
 def check_git():

@@ -39,6 +39,31 @@ unity-particle-game-reconstruction/
     └── game_summary.py         # 游戏总结工具
 ```
 
+## 🚀 快速开始
+
+### 📋 开发环境搭建
+**完整搭建指南**: [development-environment-setup.md](docs/development-environment-setup.md)
+**下载链接清单**: [download-links.md](docs/download-links.md)
+
+### 🛠️ 必需工具
+- [ ] Unity Hub + Unity Editor 2021.3.21f1
+- [ ] Visual Studio Community 2019/2022
+- [ ] Python 3.x
+- [ ] Git for Windows
+- [ ] Godot Engine (可选)
+
+### ⚡ 快速安装
+```bash
+# 1. 克隆项目
+git clone https://github.com/SunsetzF2023/unity-particle-game-reconstruction.git
+
+# 2. 安装依赖
+pip install -r requirements.txt
+
+# 3. 验证环境
+python tools/unity-setup-check.py
+```
+
 ## 原游戏分析结果
 
 基于IL2CPP分析，原游戏包含以下核心系统：
